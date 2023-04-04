@@ -17,57 +17,57 @@
         <!-- APP CONTENT -->
         <div class="container max-w-screen-sm mx-auto">
             <!-- CATEGOTY FORM -->
-            <section>
+            <section class="px-3">
                 <div class="mb-6 hidden" id="category-wrapper">
-                    <h2 class="text-xl text-slate-300 font-bold mb-2">افزودن دسته بندی جدید</h2>
+                    <h2 class="text-xl text-slate-300 font-extrabold mb-2">افزودن دسته بندی جدید</h2>
                     <form class="bg-rose-600 p-4 rounded-xl flex flex-col gap-y-4" >
                         <div>
-                            <label for="category-title" class="block mb-1 text-slate-900">عنوان</label>
-                            <input type="text" name="category-title" id="category-title" class="bg-transparent rounded-xl border border-slate-900 text-slate-200">
+                            <label for="category-title" class="block mb-1 font-black text-slate-900">عنوان</label>
+                            <input type="text" name="category-title" id="category-title" class="bg-transparent rounded-xl border font-medium border-slate-900 text-slate-200">
                         </div>
                         <div>
-                            <label for="category-description" class="block mb-1 text-slate-900">توضیحات</label>
-                            <textarea type="text" name="category-description" id="category-description" class="bg-transparent rounded-xl border border-slate-900 text-slate-200 w-full"></textarea>
+                            <label for="category-description" class="block mb-1 font-black text-slate-900">توضیحات</label>
+                            <textarea type="text" name="category-description" id="category-description" class="bg-transparent rounded-xl border font-medium border-slate-900 text-slate-200 w-full"></textarea>
                         </div>
                         <div class="flex items-center justify-between gap-x-4">
-                            <button id="add-new-category" class="flex-1 bg-zinc-900 text-slate-200 rounded-xl py-2">افزودن دسته بندی جدید</button>
-                            <button class="flex-1 border border-slate-900 text-slate-200 rounded-xl py-2" id="cancel-add-category">فراموش کردن</button>
+                            <button id="add-new-category" class="flex-1 font-extralight sm:font-medium bg-zinc-900 text-slate-200 rounded-xl py-2">افزودن دسته بندی جدید</button>
+                            <button class="flex-1 border font-medium border-slate-900 text-slate-200 rounded-xl py-2" id="cancel-add-category">فراموش کردن</button>
                         </div>
                     </form>
                 </div>
                 <button id="toggle-add-category" class="text-slate-400 text-lg mb-4 font-medium">ساخت دسته بندی جدید</button>
             </section>
             <!-- PRODUCT FORM -->
-            <div class="mb-6">
-                <h2 class="text-xl text-slate-300 font-bold mb-2">تعداد محصولات</h2>
+            <div class="mb-6 px-3">
+                <h2 class="text-xl text-slate-300 font-extrabold mb-2">تعداد محصولات</h2>
                 <form class="bg-rose-600 p-4 rounded-xl flex flex-col gap-y-4" >
                     <div>
-                        <label for="product-title" class="block mb-1 text-slate-900">عنوان</label>
-                        <input type="text" name="product-title" id="product-title" class="bg-transparent rounded-xl border border-slate-900 text-slate-200">
+                        <label for="product-title" class="block mb-1 font-black text-slate-900">عنوان</label>
+                        <input type="text" name="product-title" id="product-title" class="bg-transparent rounded-xl border font-medium border-slate-900 text-slate-200">
                     </div>
                     <div>
-                        <label for="product-quantity" class="block mb-1 text-slate-900">تعداد</label>
-                        <input type="number" name="product-quantity" id="product-quantity" class="bg-transparent rounded-xl border border-slate-900 text-slate-200">
+                        <label for="product-quantity" class="block mb-1 font-black text-slate-900">تعداد</label>
+                        <input type="number" name="product-quantity" id="product-quantity" class="bg-transparent rounded-xl border font-medium border-slate-900 text-slate-200">
                     </div>
                     <div>
-                        <label for="product-category" class="block mb-1 text-slate-900">دسته بندی</label>
-                        <select name="product-category" id="product-category" class="bg-transparent text-slate-200 border border-slate-900 rounded-xl w-full">
+                        <label for="product-category" class="block mb-1 font-black text-slate-900">دسته بندی</label>
+                        <select name="product-category" id="product-category" class="bg-transparent text-slate-200 border font-medium border-slate-900 rounded-xl w-full">
                         </select>
                         
                     </div>
                     <div class="flex items-center justify-between gap-x-4">
-                        <button id="add-new-product" class="flex-1 bg-zinc-900 text-slate-200 rounded-xl py-2">افزودن محصول جدید</button>
+                        <button id="add-new-product" class="flex-1 font-medium bg-zinc-900 text-slate-200 rounded-xl py-2">افزودن محصول جدید</button>
                     </div>
                 </form>
             </div>
             <!-- PRODUCT LIST -->
-            <h1 class="text-xl font-bold text-slate-300 mb-2">لیست محصولات</h1>
-            <div class="flex items-center justify-between mb-6">
-                <label for="search-input" class="text-slate-400 text-lg">جستجوی محصولات</label>
+            <h1 class="text-xl font-bold text-slate-300 mb-2 px-3">لیست محصولات</h1>
+            <div class="flex flex-col sm:items-center justify-between sm:flex-row  mb-6 px-3">
+                <label for="search-input" class="font-medium text-slate-400 text-lg">جستجوی محصولات</label>
                 <input type="text" name="search-input" id="search-input" class="bg-transparent rounded-xl border border-slate-500 text-slate-400"> 
             </div>
-            <div class="flex items-center justify-between mb-6">
-                <label for="sort-products" class="text-slate-400 text-lg">دسته بندی بر اساس</label>
+            <div class="flex flex-col sm:items-center justify-between sm:flex-row mb-6 px-3">
+                <label for="sort-products" class="font-medium text-slate-400 text-lg">دسته بندی بر اساس</label>
                 <select name="sort-products" id="sort-products" class="bg-transparent rounded-xl border border-slate-500 text-slate-400">
                     <option class="bg-slate-900 text-slate-300" value="">انتخاب دسته بندی</option>
                     <option class="bg-slate-900 text-slate-300" value="newest" selected>جدیدتر</option>
@@ -75,10 +75,10 @@
                 </select>
             </div>
             <div id="products-list">
-                <div class="flex items-center justify-between mb-2">
+                <div class="flex flex-col sm:flex-row items-center justify-between mb-2 px-3">
                     <span class="text-slate-400"></span>
                             <div class="flex items-center gap-x-3">
-                                <span class="text-slate-400"></span>
+                                <span class="block px-3 py-0.5 text-slate-400 border border-slate-400 text-sm rounded-2xl"></span>
                                 <span class="flex items-center justify-center w-7 h-7 rounded-full bg-slate-900 border-2 border-slate-300 font-bold text-slate-300"></span>
                                 <button class="border px-2 py-0.5 rounded-2xl border-red-800 bg-red-600 text-red-100">حذف</button>
                             </div>
