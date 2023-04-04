@@ -33,13 +33,14 @@ class ProductView {
         const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
         let result = '';
         products.forEach((item) => {
-            const selectedCategory = Storage.getAllCategories().find(c => c.id === item.category);
+            const selectedCategory = Storage.getAllCategories().find((c) => c.id == item.category)
             console.log(selectedCategory);
             result += 
             `<div class="flex items-center justify-between mb-2">
             <span class="text-slate-400">${item.title}</span>
                     <div class="flex items-center gap-x-3">
                     <span class="text-slate-400">${new Date().toLocaleDateString("fa-IR", options)}</span>
+                    <span class="block px-3 py-0.5 text-slate-400 border border-slate-400 text-sm rounded-2xl">${selectedCategory.title}</span>
                     <span class="flex items-center justify-center w-7 h-7 rounded-full bg-slate-900 border-2 border-slate-300 font-bold text-slate-300">${item.quantity}</span>
                     <button class="delete-product border px-2 py-0.5 rounded-2xl border-red-800 bg-red-600 text-red-100" data-product-id=${item.id}>حذف</button>
                     </div>

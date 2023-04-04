@@ -3,7 +3,7 @@ export default class Storage {
         const savedCategories = JSON.parse(localStorage.getItem('category')) || [];
 
         const sortedCategories = savedCategories.sort((a,b) => {
-            return new Date(a.createAt) > new Date(b.createAt) ? -1 : 1;
+            return new Date(a.createdAt) > new Date(b.createdAt) ? -1 : 1;
         });
 
         return sortedCategories;
