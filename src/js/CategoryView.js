@@ -35,7 +35,7 @@ class CategoryView {
         this.categories = Storage.getAllCategories();
     }
     createCategoriesList() {
-        let result = `<option class="bg-slate-900 text-slate-300" value="">یک دسته بندی انتخاب کن</option>`
+        let result = `<option class="bg-slate-900 text-slate-300" value="">یک دسته‌بندی انتخاب کن</option>`
         this.categories.forEach((element) => {
             result += `<option class="bg-slate-900 text-slate-300" value=${element.id}>${element.title}</option>`
         });

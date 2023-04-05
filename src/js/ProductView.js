@@ -3,7 +3,7 @@ import Storage from "./Storage.js";
 const addNewProductBtn = document.getElementById("add-new-product");
 const searchInput = document.querySelector('#search-input');
 const selectedSort = document.querySelector("#sort-products");
-const totalProducts = document.querySelector("#total-products");
+const appbarTotalProducts = document.querySelector("#total-products");
 
 class ProductView {
     constructor() {
@@ -43,13 +43,15 @@ class ProductView {
                     <span class="text-slate-400">${new Date().toLocaleDateString("fa-IR", options)}</span>
                     <span class="block px-3 py-0.5 text-slate-400 border border-slate-400 font-medium text-sm rounded-2xl">${selectedCategory.title}</span>
                     <span class="flex items-center justify-center w-7 h-7 rounded-full bg-slate-900 border-2 border-slate-300 font-bold text-slate-300">${item.quantity}</span>
-                    <button class="delete-product border px-2 py-0.5 rounded-2xl border-red-800 bg-red-600 text-red-100" data-product-id=${item.id}>حذف</button>
+                    <button class="delete-product border px-2 py-0.5 rounded-2xl border-red-800 bg-rose-600 text-red-100" data-product-id=${item.id}>حذف</button>
                     </div>
         </div>
-        <span class="block px-3 py-0.5 text-slate-400 border border-slate-400 text-sm rounded-xl mb-1">${selectedCategory.description}</span>`
+        <div class="px-3">
+        <span class="block px-3 py-0.5 text-slate-400 border border-slate-400 text-sm rounded-xl mb-1">${selectedCategory.description}</span>
+        </div>`
                 });
 
-        totalProducts.innerHTML = this.products.length;
+        appbarTotalProducts.innerHTML = this.products.length;
         productsDOM.innerHTML = result;
         const deleteBtns = [...document.querySelectorAll(".delete-product")];
         deleteBtns.forEach((item) => {
@@ -74,12 +76,7 @@ class ProductView {
         this.products = Storage.getAllProducts();
         this.createProductsList(this.products)
     }
-
-    totalProducts(products) {
-        const appbarTotalProducts = document.querySelector("#totalproducts");
-        this.products.length = Storage.getAllProducts();
-        appbarTotalProducts.innerHTML = this.products.length;
-    }
+    
 }
 
 export default new ProductView();
