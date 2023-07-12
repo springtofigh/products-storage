@@ -1,5 +1,5 @@
-## products-storage
-An inventory application in Persian language developed by TailwindCSS &amp; JavaScript base on OOP  
+## Products Storage
+An inventory application in the Persian language developed by TailwindCSS &amp; JavaScript based on OOP  
 
 ![ذخیره اطلاعات محصولات](https://github.com/springtofigh/products-storage/assets/90114320/7ff0c52a-4595-4656-9064-6f694af98dd7)
 
