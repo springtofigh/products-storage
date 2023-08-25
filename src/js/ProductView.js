@@ -35,7 +35,6 @@ class ProductView {
         let result = '';
         products.forEach((item) => {
             const selectedCategory = Storage.getAllCategories().find((c) => c.id == item.category)
-            console.log(selectedCategory);
             result += 
             `<div class="flex flex-col sm:flex-row items-center justify-between mb-2 px-3">
             <span class="text-slate-400 font-medium">${item.title}</span>
