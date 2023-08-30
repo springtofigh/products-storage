@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "postcss ./src/css/main.css -o ./public/build/tailwind.css --watch",
-    "start": "node server.js",
-    "build": "npm run build && cp font.css public/"
+    "dev": "postcss ./src/css/main.css -o ./public/build/tailwind.css --watch"
   },
   "keywords": [],
   "author": "",
