@@ -30,7 +30,7 @@ html {
   -moz-tab-size: 4; /* 3 */
   -o-tab-size: 4;
      tab-size: 4; /* 3 */
-  font-family: vazirmatn; /* 4 */
+  font-family: "vazirmatn"; /* 4 */
 }
 /*
 1. Remove the margin in all browsers.
